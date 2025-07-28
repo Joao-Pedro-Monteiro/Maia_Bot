@@ -3,9 +3,9 @@ process.env.TZ = 'America/Sao_Paulo';
 const { default: makeWASocket, DisconnectReason, useMultiFileAuthState } = require('baileys');
 const P = require('pino');
 const { Boom } = require('@hapi/boom');
-const MessageHandler = require('./middlewares/MessageHandler');
+const MessageHandler = require('./middlewares/MessageHandler.js');
 const qrcode = require('qrcode-terminal');
-const Scout = require('./middlewares/scout');
+const Scout = require('./middlewares/Scout.js');
 let isConnecting = false;
 
 class WhatsAppConnection {

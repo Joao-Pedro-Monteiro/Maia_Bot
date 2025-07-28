@@ -17,7 +17,7 @@ const financialManager_Vcard = (
 
 const e = require('express');
 //! Este bloco configura a função de envio de mensagens como é feito pelo Handler de mensagens
-const Handler = require('../middlewares/MessageHandler');
+const Handler = require('../middlewares/MessageHandler.js');
 const { text } = require('pdfkit');
 sendMessage(from, item) = Handler.sock.sendMessage(from, item)
 
