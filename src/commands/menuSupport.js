@@ -15,7 +15,6 @@ const financialManager_Vcard = (
     + 'END:VCARD'
 );
 
-const { delay } = require('baileys');
 const WhatsAppConnection = require('../connection');
 let client = new Object();
 addingSupportMessage = false; //? Flag para saber se o usuário está enviando uma mensagem de suporte

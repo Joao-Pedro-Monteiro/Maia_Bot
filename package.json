@@ -1,7 +1,7 @@
 {
-  "name": "iris-bot",
+  "name": "Maia_Bot",
   "version": "1.3.0",
-  "description": "Um bot de WhatsApp multifunções.",
+  "description": "Assitente virtual da Nimbus.",
   "main": "./src/index.js",
   "scripts": {
     "start": "node ./index.js",
