@@ -4,8 +4,8 @@ const Scout = require('../middlewares/scout.js');
 const MENU_MODULES = {
     //* 0: {path: './modulePath', name: 'name os current menu' },
     1: { path: './payment/menuPayments', name: 'payments' },
-    2: { path: './MenuTimeline', name: 'timeline' },
-    3: { path: './MenuSupport', name: 'support' },
+    2: { path: './menuTimeline', name: 'timeline' },
+    3: { path: './menuSupport', name: 'support' },
     8068: { path: '../middlewares/scout.js', name: 'scout' },
 };
 
