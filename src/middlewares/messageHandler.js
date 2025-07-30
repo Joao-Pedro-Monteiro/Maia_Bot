@@ -11,6 +11,7 @@ class MessageHandler {
         // Lista de números bloqueados
         this.blockedNumbers = new Set([
             '5500123456789@s.whatsapp.net', // Modelo de número bloqueado
+            '553198478235@s.whatsapp.net', // Lucelho Silva
         ]);
     }
 

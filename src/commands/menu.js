@@ -106,10 +106,10 @@ class Menu {
         return this.formatMenu({
             title: "Posso te ajudar nas seguintes opções:",
             options: {
-                1: "Pagamento de mensalidades 🏦",
-                2: "Consulta do cronograma do seu curso 📅",
-                3: "Feedback e pedido de suporte 📞",
-                4: "SAIR"
+                1: "*Pagamento de mensalidades 🏦*",
+                2: "*Cronograma de um curso 📅*",
+                3: "*Pedido de suporte 📞*",
+                4: "*_SAIR_*"
             }
         });
     }

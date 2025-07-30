@@ -7,6 +7,7 @@ const MessageHandler = require('./middlewares/MessageHandler.js');
 const qrcode = require('qrcode-terminal');
 const Scout = require('./middlewares/Scout.js');
 let isConnecting = false;
+let whatsappSock = null;
 
 class WhatsAppConnection {
     static RealTime() {
@@ -29,10 +30,16 @@ class WhatsAppConnection {
             logger: P({ level: 'silent' }),
         });
 
+        whatsappSock = sock; // Armazena a instância do socket globalmente
+
         await this.setupConnectionHandlers(sock, saveCreds);
 
         isConnecting = false;
         return sock;
+    }
+
+    static getSocket() {
+        return whatsappSock;
     }
 
 
