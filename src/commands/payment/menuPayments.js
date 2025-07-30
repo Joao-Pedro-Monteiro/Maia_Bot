@@ -1,6 +1,5 @@
 const { delay } = require('baileys');
-const MessageHandler = require('../../middlewares/messageHandler');
-const { text } = require('pdfkit');
+const MessageHandler = require('../../middlewares/MessageHandler.js');
 const MakePDF = require('./makePDF').MakePDF;
 const student = new Object();
 
