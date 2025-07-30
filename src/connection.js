@@ -5,7 +5,7 @@ const P = require('pino');
 const { Boom } = require('@hapi/boom');
 const MessageHandler = require('./middlewares/messageHandler.js');
 const qrcode = require('qrcode-terminal');
-const Scout = require('./middlewares/Scout.js');
+const Scout = require('./middlewares/scout.js');
 let isConnecting = false;
 let whatsappSock = null;
 

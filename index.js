@@ -1,7 +1,7 @@
 process.env.TZ = 'America/Sao_Paulo';
 
 const WhatsAppConnection = require('./src/connection');
-const Scout = require('./src/middlewares/Scout');
+const Scout = require('./src/middlewares/scout.js');
 
 async function startBot() {
     try {
