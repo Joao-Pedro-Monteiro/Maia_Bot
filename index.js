@@ -1,7 +1,7 @@
 process.env.TZ = 'America/Sao_Paulo';
 
 const WhatsAppConnection = require('./src/connection');
-const Scout = require('./src/middlewares/scout.js');
+const Scout = require('./src/middlewares/Scout.js');
 
 async function startBot() {
     try {
@@ -10,13 +10,13 @@ async function startBot() {
         
         // Graceful shutdown
         process.on('SIGINT', () => {
-            console.log('Encerrando bot...');
+            console.log('Encerrando bot... (by shutdown signal)');
             Scout.stopResourceMonitoring();
             process.exit(0);
         });
         
         process.on('SIGTERM', () => {
-            console.log('Encerrando bot...');
+            console.log('Encerrando bot... (by termination signal)');
             Scout.stopResourceMonitoring();
             process.exit(0);
         });
