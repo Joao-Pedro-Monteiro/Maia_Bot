@@ -1,5 +1,5 @@
 const commands = require('../commands');
-const Scout = require('./Scout.js');
+const Scout = require('./scout.js');
 
 class MessageHandler {
     constructor(sock) {
