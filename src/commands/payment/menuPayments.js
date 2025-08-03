@@ -1,14 +1,14 @@
 const { delay } = require('baileys');
-const MessageHandler = require('../../middlewares/MessageHandler.js');
+const MessageHandler = require('../../middlewares/messageHandler.js');
 const MakePDF = require('./makePDF').MakePDF;
 const student = new Object();
 
 const financialManager_Vcard = (
     'BEGIN:VCARD\n' // metadata of the contact card
     + 'VERSION:3.0\n' 
-    + 'FN:João Pedro Monteiro\n' // full name
-    + 'ORG:Financeiro Nimbus\n' // the organization of the contact
-    + 'TEL;type=CELL;type=VOICE;waid=554499090895:+55 4499090895\n' // WhatsApp ID + phone number
+    + 'FN:Sandro\n' // full name
+    + 'ORG:Nimbus\n' // the organization of the contact
+    + 'TEL;type=CELL;type=VOICE;waid=554598365628:+55 4598365628\n' // WhatsApp ID + phone number
     + 'END:VCARD'
 );
 
@@ -26,7 +26,7 @@ class MenuPayments{
                         case '1':
                             student.course = 'Desenvolvimento Web Básico';
                             student.lastQeuestion = 'name';
-                            return "Ótimo, para gerar seu boleto, preciso que me informe nome completo."
+                            return "Ótimo, para gerar sua fatura, preciso que me informe nome completo."
                         default:
                             return "⚠️ Opção inválida. Por favor, escolha uma opção válida ou digite `Q` para voltar ao menu principal.";
                     }

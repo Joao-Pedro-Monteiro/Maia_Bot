@@ -9,7 +9,7 @@ class MakePDF {
         const now = new Date();
         const formattedDate = now.toISOString().slice(0, 10); // AAAA-MM-DD
         const formattedDateBR = now.toLocaleDateString('pt-BR'); // DD/MM/AAAA
-        const filename = `boleto_pix_${formatedName}_${formattedDate}.pdf`;
+        const filename = `fatura_pix_${formatedName}_${formattedDate}.pdf`;
 
         // Caminhos
         const caminhoPDF = path.join(__dirname, 'docs', filename);
@@ -18,7 +18,7 @@ class MakePDF {
         // Dados do curso/pagamento
         const curso = "Desenvolvimento Web Básico";
         const valor = "R$ 150,00";
-        const vencimento = "10/08/2025";
+        const vencimento = "10/"+ (now.getMonth() + 2) +"/"+(now.getFullYear()); // Exemplo de vencimento no próximo mês do mesmo ano
         const copiaECola = "00020101021126900014br.gov.bcb.pix0114+55449990908950250Parcela: Curso Desenvolvimento Web Básico - Nimbus5204000053039865406150.005802BR5925JOAO PEDRO DE BRITO MONTE6008BRASILIA62080504SXQR630423EC";
 
         // Cores do tema
@@ -38,9 +38,9 @@ class MakePDF {
             size: 'A4',
             margin: 40,
             info: {
-                Title: `Boleto do curso para ${studentName}`,
+                Title: `Fatura 1ª parcela do curso para ${studentName}`,
                 Author: 'Nimbus Tecnologia Educacional',
-                Subject: 'Boleto para pagamento via PIX',
+                Subject: 'Fatura para pagamento via PIX',
             }
         });
 
@@ -73,7 +73,7 @@ class MakePDF {
             .font('Helvetica-Bold')
             .text('NIMBUS', 60, 65, { continued: true })
 
-        // Seção de informações do boleto
+        // Seção de informações do fatura
         const infoY = 160;
         drawRect(40, infoY, doc.page.width - 80, 120, colors.background, colors.border);
 
@@ -82,7 +82,10 @@ class MakePDF {
             .fillColor(colors.primary)
             .fontSize(18)
             .font('Helvetica-Bold')
-            .text('BOLETO DE PAGAMENTO', 60, infoY + 20);
+            .text('FATURA DE MENSALIDADE', 60, infoY + 20, {
+                width: doc.page.width - 120,
+                align: 'left' // ou 'center' se quiser centralizado
+            })
 
         // Informações do aluno em duas colunas
         const leftCol = 60;
@@ -233,7 +236,7 @@ class MakePDF {
             console.log(`✅ PDF gerado com sucesso: ${filename}`);
         });
 
-        return { caminhoPDF, filename, title: `Boleto para ${studentName}` };
+        return { caminhoPDF, filename, title: `Fatura para ${studentName}` };
     }
 }
 

@@ -1,0 +1,9 @@
+{
+    "Desenvolvimento_Web_Basico": {
+        "id": 1,
+        "description": "Curso introdutório ao desenvolvimento web, cobrindo HTML, CSS e JavaScript.",
+        "duration": "50 horas",
+        "instructor": "João Pedro de Brito Monteiro",
+        "timeline": "docs/avaliableCourses/DesenvolvimentoWebBasico/Cronograma Curso Desenvolvimento Web Básico.pdf"
+    }
+}

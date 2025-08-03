@@ -104,7 +104,7 @@ class Menu {
 
     static getMainMenu() {
         return this.formatMenu({
-            title: "Posso te ajudar nas seguintes opções:",
+            title: "Posso te ajudar nas seguintes opções:\n\n_Você pode digitar `Q` a qualquer momento para voltar a este menu!_",
             options: {
                 1: "*Pagamento de mensalidades 🏦*",
                 2: "*Cronograma de um curso 📅*",
